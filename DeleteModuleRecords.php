@@ -74,7 +74,7 @@
             "client_secret" => "",
             "username" => $sugaruser,
             "password" => $sugarpwd,
-            "platform" => "colorfarmdatapull"
+            "platform" => "mydeletescript"
         );
 
         $oauth2_token_response = call($url, 'POST', $oauth2_token_request);
