@@ -1,4 +1,4 @@
 SugarScripts
 ===========
 
-PHP script for deleting all records in a SugarCRM module
+Various PHP scripts for doing things with SugarCRM v7
