@@ -100,7 +100,7 @@
             $offset = 0;
             $batch = 1;
             while($offset >= 0) {
-                echo "Batch $batch: Retrieving $max records for deletion.\n";
+                echo "Batch $batch: Retrieving $batch_size records for deletion.\n";
                 $args = array();
                 $args['max_num'] = $batch_size;
                 $args['offset'] = $offset;
@@ -114,7 +114,7 @@
                     $records = $e->records;
                     $i = 1;
                     foreach($records as $r) {
-                        echo "Delete $i/$max: ".$r->id."\n";
+                        echo "Delete $i/$batch_size: ".$r->id."\n";
                         $d = call("/$module/".$r->id,'DELETE',null);
                         if(isset($d->error)) {
                             echo "Error: $d->error_message\n";
